@@ -10,7 +10,7 @@ public class FileReader {
 
     static void openFile(){
         try{
-            File file = new File("C:\\Users\\it\\Documents\\NetBeansProjects\\medicalCare\\src\\healthCareSystem\\Data.txt");
+            File file = new File("Data.txt");
             scan = new Scanner(file);
 
         }
