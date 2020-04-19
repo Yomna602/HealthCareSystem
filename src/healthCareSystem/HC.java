@@ -2,6 +2,7 @@
 package healthCareSystem;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class HC {
         static ArrayList<Doctor> arrDoctor = new ArrayList<>();
@@ -72,6 +73,40 @@ public class HC {
                 }
 
         }
+       
+        
+        public void deleteDoctor(String id){
+            Iterator<Doctor> itr = arrDoctor.iterator();
+                while(itr.hasNext()){
+                    Doctor d = itr.next();
+                      if(d.getId().equals(id)){
+                      itr.remove();
+                      break;
+                 }
+         }
+         }
+        
+        public void deleteNPatient(String id){
+            Iterator<NPatient> itr = arrNormal.iterator();
+                while(itr.hasNext()){
+                    NPatient n = itr.next();
+                      if(n.getId().equals(id)){
+                      itr.remove();
+                      break;
+                 }
+         }
+         }
+        
+        public void deleteEPatient(String id){
+            Iterator<EPatient> itr = arrEmergency.iterator();
+                while(itr.hasNext()){
+                    EPatient e = itr.next();
+                      if(e.getId().equals(id)){
+                      itr.remove();
+                      break;
+                 }
+         }
+         }
         static void displayDoctor(){
                 if(arrDoctor.size() != 0){
                         for (Doctor d :arrDoctor) {
